@@ -1,0 +1,53 @@
+{
+    "name": "سورس ريبثون ميوزك",
+    "description": "لتشغيل الاغاني في المجموعات والقنوات.",
+    "logo": "https://telegra.ph/file/1c45f4fac38e5a84a8844.jpg",
+    "keywords": [
+        "Telegram",
+        "MusicPlayer",
+        "VideoPlayer"
+    ],
+    "repository": "https://github.com/SoRsRR8r9/strong",
+    "env": {
+        "SESSION": {
+            "description": "اكتب هنا كود بايروجرام",
+            "required": true
+        },
+          "API_ID": {
+            "description": "ايبي ايدي",
+            "required": true,
+            "value": ""
+        },
+        "HNDLR": {
+            "description": "لاتغيرها ابدا",
+            "required": false,
+            "value": "!"
+        },
+            "API_HASH": {
+            "description": "ايبي هاش",
+            "required": true,
+            "value": ""
+        },
+           "SUDO_USERS": {
+            "description": "اكتب ايدي المطور او اتركها كما هي",
+            "required": true,
+            "value": "5502537272"
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
